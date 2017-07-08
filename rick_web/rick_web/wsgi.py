@@ -11,6 +11,13 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
+sys.path.append(os.path.dirname(os.path.abspath(__file__)) + '/..' )
+sys.path.append(os.path.dirname(os.path.abspath(__file__)) + '/../rick_web')
+
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "rick_web.settings")
+
+
+
+
 
 application = get_wsgi_application()
