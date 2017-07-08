@@ -25,7 +25,7 @@ SECRET_KEY = '2i+#y6w&2bla_(oxfo2gc^ndbw@62(g^dhlz2h&^bdz#pv&o3%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+allowed_hosts = [ 'www.rick-yan.com', 'rick-yan.com' ]
 
 
 # Application definition
