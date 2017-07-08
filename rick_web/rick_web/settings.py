@@ -73,12 +73,31 @@ WSGI_APPLICATION = 'rick_web.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+# For local development and sandbox work
+#
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# FIXME - use this on HostGator for MySQL DB
+#
+#DATABASES = {
+#    'default': {
+#        'ENGINE':   'django.db.backends.mysql',
+#        'NAME':     'klc_rickDB',
+#        'USER':     'klc_rick',
+#        'PASSWORD': 'bezore',
+#        'HOST':     '127.0.0.1',
+#        'PORT':     '3306',
+#    }
+#}
+
+# static file path, within my_web repo 
+#
+STATIC_ROOT = os.path.join(BASE_DIR, '../www/static')
 
 
 # Password validation
