@@ -20,12 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '2i+#y6w&2bla_(oxfo2gc^ndbw@62(g^dhlz2h&^bdz#pv&o3%'
+SECRET_KEY = 'o)80)uke0*zqe^&d@o28-*!-&t%o5zc!xbzzz#tjter3*nevmv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-allowed_hosts = [ 'www.rick-yan.com', 'rick-yan.com', '34.211.100.134' ]
+ALLOWED_HOSTS = ['34.211.100.134', 'rick-yan.com', 'www.rick-yan.com']
 
 
 # Application definition
@@ -73,27 +73,12 @@ WSGI_APPLICATION = 'rick_web.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-# For local development and sandbox work
-#
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
-# FIXME - use this on HostGator for MySQL DB
-#
-#DATABASES = {
-#    'default': {
-#        'ENGINE':   'django.db.backends.mysql',
-#        'NAME':     'klc_rickDB',
-#        'USER':     'klc_rick',
-#        'PASSWORD': 'bezore',
-#        'HOST':     '127.0.0.1',
-#        'PORT':     '3306',
-#    }
-#}
 
 
 # Password validation
@@ -132,9 +117,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = '/static/'
-
-# static file path, within my_web repo 
-#
-STATIC_ROOT = os.path.join(BASE_DIR, '../www/static')
-
+STATIC_URL  = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR,"../www/static/")
