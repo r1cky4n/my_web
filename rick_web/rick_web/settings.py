@@ -25,7 +25,7 @@ SECRET_KEY = '2i+#y6w&2bla_(oxfo2gc^ndbw@62(g^dhlz2h&^bdz#pv&o3%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-allowed_hosts = [ 'www.rick-yan.com', 'rick-yan.com' ]
+allowed_hosts = [ 'www.rick-yan.com', 'rick-yan.com', '34.211.100.134' ]
 
 
 # Application definition
@@ -95,10 +95,6 @@ DATABASES = {
 #    }
 #}
 
-# static file path, within my_web repo 
-#
-STATIC_ROOT = os.path.join(BASE_DIR, '../www/static')
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -137,3 +133,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# static file path, within my_web repo 
+#
+STATIC_ROOT = os.path.join(BASE_DIR, '../www/static')
+
