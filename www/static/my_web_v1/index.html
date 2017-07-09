@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="library/reset-meyer.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body onload="init()">
+    <div id="wrap_body">
+        <div id="wrap_header">
+            <div id="header_title">
+                RICK YAN
+            </div>
+
+            <div id="header_nav">
+                <button class="nav_button" onclick="focusOnElement('about')">ABOUT</button>
+                <div class="nav_vline"></div>
+                <button class="nav_button" onclick="focusOnElement('experience')">EXPERIENCE</button>
+                <div class="nav_vline"></div>
+                <button class="nav_button" onclick="focusOnElement('contact')">CONTACT</button>
+            </div>
+        </div>
+
+        <div id="wrap_main">
+            <div id="wrap_splash">
+                <img id="splash_pic" src="splash.jpg" alt="Splash Picture">
+                <span id="span_splash">
+                    I met a traveller from an antique land <br>
+                    Who said: 'Two vast and trunkless legs of stone<br>
+                    Stand in the desert. Near them, on the sand,<br>
+                    Half sunk, a shattered visage lies, whose frown,<br>
+                    And wrinkled lip, and sneer of cold command,<br>
+                    Tell that its sculptor well those passions read<br>
+                    Which yet survive, stamped on these lifeless things,<br>
+                    The hand that mocked them and the heart that fed.<br>
+                    And on the pedestal these words appear --<br>
+                    "My name is Ozymandias, king of kings:<br>
+                    Look on my works, ye Mighty, and despair!"<br>
+                    Nothing beside remains. Round the decay<br>
+                    Of that colossal wreck, boundless and bare<br>
+                    The lone and level sands stretch far away.'<br>
+                    <span id="splash_quote"> "Ozymandias", Percy Shelley</span>
+                </span>
+            </div>
+
+            <div id="wrap_about">
+                <div class="subheader">
+                    I AM AN ENGINEER
+                </div>
+
+                <div class="subpage">
+                    But there is more too engineering that just the physical and concrete. We are the creators of
+                    the future, so our actions today not only affect the lives of those around us, but also the lives
+                    of those who will succeed us. We must design and build a world that reflects the best in humanity,
+                    and pass down a sustainable legacy that can grow and evolve with the needs of the times.
+
+                    <br><br>
+
+                    With this in mind, I want to help usher in the future. I am a hardware engineer
+                    at a stealth startup aiming to democratize hardware design for the masses. We are building a modular
+                    and customizable hardware and software solution that allows for the rapid bring-up of ASIC-like designs
+                    without the multi-million dollar costs or year-long design schedules. As the Lead Digital Design Engineer,
+                    it is my responsibility to create a system that is scalable, accessible, and resilient. Our product will ease
+                    the development of everything from small form-factor wearables such as biometric sensor rings to mission
+                    critical control systems like autonomous driving vehicle hardware arrays. There is still a lot of work ahead of us,
+                    but the challenge is exciting and fun.
+
+                    <br><br>
+
+                    If you like to learn more about me or my company, please feel free to contact me.
+                    Thank you for visiting my website.
+                </div>
+            </div>
+
+            <div id="wrap_experience">
+                <div class="subheader">
+                    EXPERIENCE
+                </div>
+                <div class="subpage">
+                    I graduated from Cornell University with a Bachelors in Electrical and Computer Engineering in the Winter of 2011.
+                    My first job out of college was at Intel in Oregon, where I worked as a Formal Verification Engineer on the Haswell/Broadwell
+                    architecture, validating hardware virtualization and the Uncore System Agent. This eventually transitioned to a
+                    Validation Engineer role on the Input/Output Memory Management Unit, a modular and scalable Soft-IP for VT-d and
+                    SVM that is used internally in all Intel architectures ranging from mobile to HPC.
+
+                    <br><br>
+
+                    In 2015, I move to the Bay Area and transferred internally to Intel’s Server division. There, I was a
+                    Design Engineer on Cannonlake Server and owned both Core Hard-IP integration and System Agent VT-d Design
+                    using the IOMMU. With respect to Core HIP Integration, I coordinated a multi-site design and validation
+                    team across the US, India, and Israel to insure that the CNX Core was properly validated and integrated on schedule.
+
+                    <br><br>
+
+                    In 2016, I decided to leave Intel and pursue other opportunities. I wanted to see what else was out
+                    there, and to see what it was like working in a smaller, more agile environment. Hence, I am now working
+                    in a stealth startup developing a product which targets both the IoT market and smaller companies without
+                    the budget for full scale hardware design divisions. Having put on multiple hats within the company,
+                    I have learned a lot and have been exposed to a lot more than I would have at Intel since joining.
+                    I have basically owned the full front-end design stack, from architecture, design, and validation to
+                    synthesis, timing, analog interfacing, backend interfacing, and FPGA prototyping. Though I definitely
+                    do miss the support that a big company offers, I love having the freedom of tackling a design problem
+                    without being burdened by bureaucracy.
+
+                    <br><br>
+
+                    Since moving to California, I decided to continue my education to broaden my perspective in the semiconductor
+                    industry as well as learn more about IoT and software design. As such, I’ve enrolled in Stanford’s Honor’s
+                    Coop Program, a part-time graduate program that allows me to pursue my Masters in Electrical Engineering while
+                    still working full-time. I will be finished by the Spring of 2017, with a EE focus on Hardware and Software System Design.
+                </div>
+            </div>
+
+            <div id="wrap_contact">
+                <div class="subheader">
+                    CONTACT
+                </div>
+                <div class="subpage">
+                    Please feel free to contact me at blahblahblah@gmail.com.
+
+                    <br><br>
+
+                    You can access my LinkedIn at blahblah.
+                </div>
+            </div>
+        </div> <!--wrap_main-->
+
+    </div> <!--wrap_body-->
+
+
+
+<script src="library/jquery-3.1.0.js"></script>
+<script>
+
+
+    //======================================================
+    // GLOBALS
+    //======================================================
+
+
+
+    //======================================================
+    // INITIALIZATION
+    //======================================================
+
+    function init() {
+        resizeFormat(this);
+
+        winH = window.innerHeight;
+
+        console.log ("win height is "+winH);
+        console.log ("win height is "+parseInt(winH) );
+
+        // resize splash page to cover browser window
+        //
+        if ( winH > 1200) {
+            document.getElementById("wrap_splash").style.height = window.innerHeight+'px';
+            console.log("splash resized");
+        }
+
+        // reorder the divs for proper fade effect
+        // $("#wrap_experience").insertAfter("#wrap_contact");​
+        // $("#wrap_about").insertAfter("#wrap_experience");​
+        // $("#wrap_splash").insertAfter("#wrap_about");​
+
+        // $("#wrap_header").insertAfter("#wrap_main");​
+    }
+
+
+    //======================================================
+    // EVENT HANDLERS
+    //======================================================
+
+    function focusOnElement(ele) {
+        $("#wrap_"+ele).goTo();
+        console.log("element clicked");
+    }
+
+    (function($) {
+        $.fn.goTo = function() {
+            $('html, body').animate({
+                scrollTop: $(this).offset().top + 'px'
+            }, 'slow');
+            return this; // for chaining...
+        }
+    })(jQuery);
+
+    function modHeader(e) {
+        if (window.pageYOffset >= 1100) {
+            document.getElementById("wrap_header").style.boxShadow = "0 0 10px 10px black";
+            document.getElementById("wrap_header").style.height = "50px";
+        }
+        if ((window.pageYOffset < 1100) && (window.pageYOffset >= 0)) {
+            document.getElementById("wrap_header").style.boxShadow = "0 0 10px 10px black";
+            document.getElementById("wrap_header").style.height = "50px";
+        }
+
+        // resize splash image if necessary
+
+        var zoom = document.getElementById("splash_pic").clientWidth / window.innerWidth;
+
+        console.log("scroll detected zoom= "+zoom);
+    }
+
+    function resizeFormat(e) {
+        var w = window.outerWidth;
+        var h = window.outerHeight;
+
+        // resize subpage
+        //
+        var leftShift = 0.1;
+        var rightShift = 0.15;
+
+        var spSize = (1 - leftShift - rightShift) * w;
+        //if (w < 800) {spSize = 400;}
+
+        var ele = document.getElementsByClassName("subpage");
+
+        for (var i = 0; i < ele.length; i++) {
+            ele[i].style.width = spSize + "px";
+        }
+    }
+
+    //======================================================
+    // EVENTS
+    //======================================================
+
+    document.addEventListener("scroll", modHeader, false);
+    window.addEventListener("resize", resizeFormat, false);
+
+</script>
+</body>
+
+</html>
