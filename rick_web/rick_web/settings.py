@@ -25,7 +25,7 @@ SECRET_KEY = 'o)80)uke0*zqe^&d@o28-*!-&t%o5zc!xbzzz#tjter3*nevmv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['34.211.100.134', 'rick-yan.com', 'www.rick-yan.com']
+ALLOWED_HOSTS = ['34.211.100.134', 'rick-yan.com', 'www.rick-yan.com', '127.0.0.1']
 
 
 # Application definition
