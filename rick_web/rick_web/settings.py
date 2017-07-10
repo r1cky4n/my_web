@@ -54,7 +54,9 @@ ROOT_URLCONF = 'rick_web.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [ os.path.join(BASE_DIR,"blogapp/templates/"),
+        
+                ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
