@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clean Blog - Sample Post</title>
+    <title>Rick's Blog - Post</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{% static "vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
@@ -44,7 +44,7 @@
                     <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="{% url 'index' %}">Start Bootstrap</a>
+                <a class="navbar-brand" href="{% url 'index' %}">Rick's Blog</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -55,9 +55,6 @@
                     </li>
                     <li>
                         <a href="{% url 'about' %}">About</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'blogpost' %}">Sample Post</a>
                     </li>
                     <li>
                         <a href="{% url 'contact' %}">Contact</a>
@@ -76,9 +73,9 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>Man must explore, and this is exploration at its greatest</h1>
-                        <h2 class="subheading">Problems look mighty small from 150 miles up</h2>
-                        <span class="meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</span>
+                        <h1>Hello World</h1>
+                        <h2 class="subheading">Welcome to my website. Stay and learn a little about it.</h2>
+                        <span class="meta">Posted on July 12, 2017</span>
                     </div>
                 </div>
             </div>
@@ -90,40 +87,96 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
 
-                    <p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>
+                    <p>
+                    This is actually my third attempt at making a personal website. My first time trying was in 
+                    middle school, where I integrated a chat client on a webpage and just left it at that. My second
+                    attempt was last year, where after realizing that this domain was available, I quickly mocked 
+                    something up and hosted it on my parent's HostGator account.
+                    </p>
 
-                    <p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.</p>
+                    <p>
+                    This time around, I'm going to do things differently - no more taking shortcuts. this blog will be about
+                    how I built up a website from scratch, and document the steps in case anyone out there is interested.
+                    </p>
 
-                    <p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>
+                    <p>
+                    In addition, this blog will cover the various projects I'll be working on, whether it be related 
+                    to work, exploring tensorflow, or just general things around the house I'm doing. Motivation is
+                    definitely something I lack at times - hopefully this medium will help inspire me to keep learning
+                    and try new things.
+                    </p>
 
-                    <p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>
+                    <h2 class="section-heading">About This Site, as of Today...</h2>
 
-                    <h2 class="section-heading">The Final Frontier</h2>
+                    <p>
+                    To get started, I'd like to explain what I've already done. 
+                    </p>
 
-                    <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+                    <p>
+                    This current layout is pretty much a generic <a href="https://startbootstrap.com/template-overviews/clean-blog/">Bootstrap Blog</a> template.
+                    I'll be personalizing the website in the near future, Though I'm pretty ok with the general layout of
+                    this template and don't mind sticking with it.
+                    </p>
 
-                    <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+                    <p>
+                    For my backend setup, I'm using Django (the latest version - 1.11.3) with nginx. I'm using AWS Lightsail
+                    to host my blog. As an aside, in my short experience with it, AWS is wonderful and very easy to use service.
+                    At work we are using Microsoft Azure, and its just so much more difficult learning how to use their UI
+                    and figuring out exactly what you need.
+                    </p>
 
-                    <blockquote>The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
+                    <p>
+                    On Lightsail, I spun up a Ubuntu 16.04 instance and using the following setup tutorials from Digital 
+                    Ocean, I got my site up and running. Keep in mind the OS version is critical for some of these tutorials - 
+                    I wasted a day debugging issues related to differences between Ubuntu 14.04 and 16.04.
+                    </p>
 
-                    <p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
+                    <p>
+                    <a href="https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-16-04">Installing Nginx on Ubuntu 16.04</a>
+                    </p>
 
-                    <h2 class="section-heading">Reaching for the Stars</h2>
+                    <p>
+                    <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-16-04">Setting Up Nginx Server Blocks on Ubuntu 16.04</a>
+                    </p>
 
-                    <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
+                    <p>
+                    <a href="https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-uwsgi-and-nginx-on-ubuntu-16-04">Django with uWSGI and Nginx on Ubuntu 16.04</a>
+                    </p>
 
-                    <a href="#">
-                        <img class="img-responsive" src="{% static 'img/post-sample-image.jpg' %}" alt="">
-                    </a>
-                    <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
 
-                    <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
+                    <p>
+                    After that, it was merely setting up a skeletal Django project and integrating in the bootstrap html
+                    code into the Django templates. The <a href="https://docs.djangoproject.com/en/1.11/intro/tutorial01/">Django Tutorials</a>
+                    are very useful in learning how to use the framework.
+                    </p>
 
-                    <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
+                    <p>
+                    If you like to look at code, I'm hosting the website's collateral on <a href="https://github.com/rickzglue/my_web">GitHub</a>.
+                    This is an active repo, so it should be up to date with the latest contents on this website.
+                    </p>
 
-                    <p>Placeholder text by <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
+                    <h2 class="section-heading">Future Steps...</h2>
+
+                    <p>
+                    Next steps will be to obviously update the assets on the website and get things such as the email form
+                    working. In addition, I'm going to generate my blog posts from a database as oppose to creating new
+                    HTML pages each post, so I'll need to get the MySQL DB set up (though I may stick to sqlite for a little while).
+                    </p>
+
+                    <p>
+                    Long term, I want to get stuff set up on this VM such that I can migrate my parent's websites over and
+                    maintain them. Their websites definitely need some TLC, so that will be phase 2 of this project.
+                    </p>
+
+                    <p>
+                    Anyways, thanks for reading this post and joining on this adventure with me :)
+                    </p>
+
+                    <p>
+                    Rick
+                    </p>
+
                 </div>
             </div>
         </div>
@@ -138,7 +191,7 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <ul class="list-inline text-center">
                         <li>
-                            <a href="#">
+                            <a href="https://twitter.com/r1cky4n">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -146,7 +199,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://www.linkedin.com/in/rick-yan/">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-square fa-stack-2x"></i>
                                     <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -154,7 +207,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://www.facebook.com/r1cky4n">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-square fa-stack-2x"></i>
                                     <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -162,7 +215,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="https://github.com/rickzglue">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -170,7 +223,7 @@
                             </a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted">Copyright &copy; Your Website 2016</p>
+                    <p class="copyright text-muted">Copyright &copy; Rick Yan 2017</p>
                 </div>
             </div>
         </div>
