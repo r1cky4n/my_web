@@ -19,7 +19,7 @@ from django.http import HttpResponse
 def index(request):
     test_value = False;
     context = {
-        'test_value':   test_value,        
+        #'test_value':   test_value,        
     }
     return render(request, 'blogapp/index.html', context)
 
@@ -27,19 +27,22 @@ def index(request):
 # about - blog about page
 #
 def about(request):
-    return HttpResponse("Hello, world. Blogapp about...")
+    context = { }
+    return render(request, 'blogapp/about.html', context)
 
 
 # blogpost - generated blog post page FIXME: parameterize 
 #
 def blogpost(request):
-    return HttpResponse("Hello, world. Blogapp blogpost...")
+    context = { }
+    return render(request, 'blogapp/post.html', context)
 
 
 # contact - blog contact page
 #
 def contact(request):
-    return HttpResponse("Hello, world. Blogapp contact...")
+    context = { }
+    return render(request, 'blogapp/contact.html', context)
 
 
 
