@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from . import ContactForm
 
 
 #=======================================================================================================================
@@ -41,7 +41,12 @@ def blogpost(request):
 # contact - blog contact page
 #
 def contact(request):
-    context = { }
+
+    contact_form = ContactForm
+
+    context = {
+        'contact_form': contact_form    
+    }
     return render(request, 'blogapp/contact.html', context)
 
 
