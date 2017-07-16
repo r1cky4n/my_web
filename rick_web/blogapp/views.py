@@ -37,6 +37,12 @@ def blogpost(request):
     context = { }
     return render(request, 'blogapp/post.html', context)
 
+# FIXME - post2
+#
+def post2(request):
+    context = { }
+    return render(request, 'blogapp/post2.html', context)
+
 
 # contact - blog contact page
 #
@@ -58,7 +64,8 @@ def contact_msg(request):
 
             send_mail( 
                 "[CONTACT FORM] - " + name,
-                "You have received a new message from your website contact form.\n\nHere are the details:\n\nName: "+name+"\n\nEmail: "+email+"\n\nMessage:\n"+msg,
+                "You have received a new message from your website contact form.\n\nHere are the details:\n\nName: "
+                +name+"\n\nEmail: "+email+"\n\nMessage:\n\n"+msg,
                 settings.EMAIL_HOST_USER,
                 ['contact@rickyan.com'],
             )

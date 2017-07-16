@@ -11,9 +11,13 @@ urlpatterns = [
     #
     url(r'^about/$', views.about, name='about'),
 
-    # blogpost -> /blogpost/ 
+    # blogpost -> /post/ 
     #
     url(r'^post/$', views.blogpost, name='blogpost'),
+
+    # FIXME - post 2 -> /post2/ 
+    #
+    url(r'^post2/$', views.post2, name='post2'),
 
     # contact -> /contact/ 
     #
