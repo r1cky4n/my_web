@@ -83,7 +83,7 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
                         <h1>
-                            Update #1 - Basic Site is Now Working!
+                            Basic Site is Now Working!
                         </h1>
                         <h2 class="subheading">
                             Created a favicon, and got the contact page up.
@@ -101,9 +101,77 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
+                    <h2 class="section-heading">Creating the Favicon...</h2>
+
                     <p>
-                    Rick
+                    I'm not very artistic, but I managed to throw together a servicable icon for my website using
+                    <a href="https://vectr.com">Vectr</a>, a SVG drawing tool. Hopefully you guys can figure out what
+                    it is suppose to be. :)
                     </p>
+
+                    <img class="img-responsive center-block" src='{% static 'favicons/pluto_simple.svg' %}' alt="Pluto Simple" height="400" width="400">
+                    <span class="caption text-muted">Woof Woof</span>
+
+                    <p>
+                    Afterwards, I used <a href="http://realfavicongenerator.net/">this online favicon generator</a> to
+                    create all the icon collateral for Android, iOS, and regular web browsers. It pretty useful, as not
+                    only does it generate the proper image sizes, but it also autogenerates the html tags and provides a 
+                    quick and easy validation service as well.
+                    </p>
+
+                    <p>
+                    As an sidenote, I originally set up the favicon path in the Nginx conf file. This seems to work
+                    for IE, Edge, and Firefox, but Chrome doesn't recognize it. As such, I recommend just 
+                    setting the favicon path information in the HTML header blocks.
+                    </p>
+        
+                    <h2 class="section-heading">Setting up the Contact Form...</h2>
+
+                    <p>
+                    The Bootstrap Blog template I started with had Javascript and PHP starter code for the contact
+                    page. However, since I'm already up and running with Django, and I am pretty knowledgable with Python,
+                    it really doesn't make sense for me to set up and support PHP, a language I've never used before.
+                    </p>
+
+                    <p>
+                    Retrofitting the code for Django wasn't too difficult. I created a new /contact_msg/ page which the 
+                    existing contact form directs its POST output to. This contact_msg page is managed by a Django view, which
+                    in the presence of a AJAX POST request, will send an email with the form's information to 
+                    contact@rickyan.com.
+                    </p>
+
+                    <p>
+                    I'm actually having a free Gmail account handle the contact functionality for me. In my settings.py file,
+                    you can see the SMTP settings to direct to the Google mail servers. My account information is not
+                    included in the Git repo (for obvious reasons), but you can see examples of the setup
+                    <a href="https://stackoverflow.com/questions/15985191/how-can-i-send-e-mail-from-django-using-the-google-smtp-server">here</a>.
+                    </p>
+
+                    <p>
+                    Two things to note. First. the Gmail account you are using to handle contact messages needs its 
+                    security settings to be modified. You will have to 
+                    <a href="https://support.google.com/accounts/answer/6010255">allow less secures apps to access the account</a>,
+                    and you won't be able to turn on two-step authentications. I recommend creating a new email account 
+                    just for this purpose if you choose to go this route.
+                    </p>
+
+                    <p>
+                    Finally, if you want to protect against Cross-Site Request Forgeries, you will have to add some more
+                    code to set it up. Since this is just a contact form, CSRF attacks are not applicable, and I chose not
+                    to add protection on the POST command. 
+                    </p>
+
+                    <h2 class="section-heading">Next Steps...</h2>
+
+                    <p>
+                    Now that my website's basic functionality is pretty much all up and running, my next focus is to
+                    codify my posts. Right now, I'm still creating a static page per post - I'm planning on creating
+                    a generic post template and populating it with post context stored in a backend DB. This might be 
+                    convoluted given my limited exposure to web programming, so I'll do some research to see if there
+                    are better options.
+                    </p>
+
+
 
                 </div>
             </div>
