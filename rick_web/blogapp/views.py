@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 from django.http import HttpResponse
-from . import ContactForm
+from blogapp.forms import ContactForm
 
 
 #=======================================================================================================================
@@ -49,6 +49,18 @@ def contact(request):
     }
     return render(request, 'blogapp/contact.html', context)
 
+
+# contact message- processes the contact form input
+#
+def contact_msg(request):
+    if request.is_ajax():
+        if request.method == "POST":
+            name = request.POST['name']
+
+        message = "Yes, AJAX!"
+    else:
+        message = "Please use the contact form to email contact@rickyan.com."
+    return HttpResponse(message)
 
 
 
