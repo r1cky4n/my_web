@@ -130,3 +130,14 @@ STATIC_URL  = '/static/'
 #STATIC_URL = os.path.join(BASE_DIR,"/www/static/")
 STATIC_ROOT = os.path.join(BASE_DIR,"../www/static/")
 
+
+# EMAIL Settings - Using GMAIL Account which allows less secure apps
+#
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+
+# Account info here, which is ignored by git 
+#
+from local_settings import *
+
