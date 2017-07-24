@@ -28,8 +28,6 @@ urlpatterns = [
     url(r'^contact_msg/$', views.contact_msg, name='contact_msg'),
 
 
-    # ex: /polls/5/results/
-    #url(r'^(?P<question_id>[0-9]+)/results/$', views.results, name='results'),
 ]
 
 
