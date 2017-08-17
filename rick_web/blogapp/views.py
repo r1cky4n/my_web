@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.conf import settings
+
+from blogapp.models import Post, Category
 
 #=======================================================================================================================
 # Views for Bootstrap blog template
@@ -22,7 +24,6 @@ def index(request):
         #'test_value':   test_value,        
     }
     return render(request, 'blogapp/index.html', context)
-
 
 # about - blog about page
 #
@@ -42,6 +43,38 @@ def blogpost(request):
 def post2(request):
     context = { }
     return render(request, 'blogapp/post2.html', context)
+
+
+
+# FIXME
+#
+def view_post(request, slug):   
+    context = {
+        'post': get_object_or_404(Post, slug=slug)
+    }
+    return render(request, 'view_post.html', context)
+
+
+def view_category(request, slug):
+    category = get_object_or_404(Category, slug=slug)
+
+    context = {
+        'category': category,
+        'posts': Blog.objects.filter(category=category)[:5]
+    }
+    return render(request, 'view_category.html', context)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # contact - blog contact page
