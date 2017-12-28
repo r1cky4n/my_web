@@ -37,8 +37,6 @@ urlpatterns = [
     #
     url(r'^post/(?P<slug>[^\.]+)', views.view_post, name='view_blog_post'),
     
-    # DB Stored Blog Category -> /post/category/...
-    url(r'^post/category/(?P<slug>[^\.]+)', views.view_category, name='view_blog_category'),
 ]
 
 

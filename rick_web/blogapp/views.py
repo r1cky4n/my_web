@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.conf import settings
 
-from blogapp.models import Post, Category
+from blogapp.models import Post
 
 #=======================================================================================================================
 # Views for Bootstrap blog template
@@ -38,6 +38,10 @@ def blogpost(request):
     context = { }
     return render(request, 'blogapp/post.html', context)
 
+
+
+
+
 # FIXME - post2
 #
 def post2(request):
@@ -53,16 +57,6 @@ def view_post(request, slug):
         'post': get_object_or_404(Post, slug=slug)
     }
     return render(request, 'view_post.html', context)
-
-
-def view_category(request, slug):
-    category = get_object_or_404(Category, slug=slug)
-
-    context = {
-        'category': category,
-        'posts': Blog.objects.filter(category=category)[:5]
-    }
-    return render(request, 'view_category.html', context)
 
 
 

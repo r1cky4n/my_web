@@ -11,11 +11,11 @@ from django.db.models import permalink
 
 
 class Post(models.Model):
-    title = models.CharField(max_length=100, unique=True)          
-    slug  = models.SlugField(max_length=100, unique=True)
-    date  = models.DateTimeField(db_index=True, auto_now_add=True)
-    body  = models.TextField()
-    category = models.ForeignKey('blogapp.Category')
+    title    = models.CharField(max_length=255, unique=True)          
+    subtitle = models.CharField(max_length=255)          
+    slug     = models.SlugField(max_length=255, unique=True)
+    date     = models.DateTimeField(db_index=True, auto_now_add=True)
+    body     = models.TextField()
 
     def __unicode__(self):
         return '%s' % self.title
@@ -24,19 +24,6 @@ class Post(models.Model):
     def get_absolute_url(self):
         return ('view_blog_post', None, {'slug': self.slug})
 
-
-
-
-class Category(models.Model):
-    title = models.CharField(max_length=100, unique=True)   # Category Title
-    slug  = models.SlugField(max_length=100, unique=True)   # Category Description
-    
-    def __unicode__(self):
-        return '%s' % self.title
-
-    @permalink
-    def get_absolute_url(self):
-        return ('view_blog_category', None, {'slug': self.slug})
 
 
 
