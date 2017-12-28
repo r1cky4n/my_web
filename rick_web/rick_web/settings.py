@@ -15,12 +15,8 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'o)80)uke0*zqe^&d@o28-*!-&t%o5zc!xbzzz#tjter3*nevmv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,6 +27,7 @@ ALLOWED_HOSTS = ['34.211.100.134', 'rick-yan.com', 'www.rick-yan.com', '127.0.0.
 # Application definition
 
 INSTALLED_APPS = [
+    'blogapp.apps.BlogappConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -137,7 +134,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 
-# Account info here, which is ignored by git 
+# Account info and other private info here, which is ignored by git 
 #
 from local_settings import *
 
