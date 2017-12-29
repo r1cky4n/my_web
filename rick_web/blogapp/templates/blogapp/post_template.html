@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% with post_title="Test Heading" post_subtitle="Test Subheader" post_date="Test Date" post_body="Test Contect" %}
 <html lang="en">
 
 {% load static %}
@@ -83,9 +82,9 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1>{{post_title}}</h1>
-                        <h2 class="subheading">{{post_subtitle}}</h2>
-                        <span class="meta">Posted on {{post_date}}</span>
+                        <h1>{{post.title}}</h1>
+                        <h2 class="subheading">{{post.subtitle}}</h2>
+                        <span class="meta">Posted on {{post.get_date_MDY}}</span>
                     </div>
                 </div>
             </div>
@@ -98,7 +97,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-                    {{post_body}}
+                    {{post.body|safe}}
 
                 </div>
             </div>
@@ -169,4 +168,3 @@
 
 </html>
 
-{% endwith %}

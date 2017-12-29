@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.db.models import permalink
+from datetime import datetime
 
 #================================================
 # Blog Models
@@ -24,6 +25,9 @@ class Post(models.Model):
     def get_absolute_url(self):
         return ('view_blog_post', None, {'slug': self.slug})
 
+    def get_date_MDY(self):
+        return self.date.strftime("%B %d, %Y")
+        
 
 
 

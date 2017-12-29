@@ -22,6 +22,7 @@ def index(request):
     test_value = False;
     context = {
         #'test_value':   test_value,        
+        'posts': Post.objects.all()[:5]
     }
     return render(request, 'blogapp/index.html', context)
 
@@ -56,7 +57,7 @@ def view_post(request, slug):
     context = {
         'post': get_object_or_404(Post, slug=slug)
     }
-    return render(request, 'view_post.html', context)
+    return render(request, 'blogapp/post_template.html', context)
 
 
 
