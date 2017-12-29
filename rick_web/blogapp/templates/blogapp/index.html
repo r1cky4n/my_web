@@ -95,33 +95,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-preview">
-                    <a href="{%url 'post2' %}">
-                        <h2 class="post-title">
-                            Basic Site is Now Working!
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Created a favicon, and got the contact page up.
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted on July 16, 2017</p>
-                </div>
-                <hr>            
-                <div class="post-preview">
-                    <a href="{%url 'blogpost' %}">
-                        <h2 class="post-title">
-                            Hello World
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Welcome to my website. Stay and learn a little about it.
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted on July 12, 2017</p>
-                </div>
-                <hr>
 
-
-                <!-- TEST TEST -->
+                <!-- Get Posts from Database -->
                 {% if posts %}
                     {% for post in posts %}
                         <div class="post-preview">
@@ -138,7 +113,6 @@
                         <hr>
                     {% endfor %}
                 {% endif %}
-                <!-- TEST TEST -->
 
                 <!-- Pager -->
                 <ul class="pager">

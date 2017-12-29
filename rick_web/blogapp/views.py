@@ -22,7 +22,7 @@ def index(request):
     test_value = False;
     context = {
         #'test_value':   test_value,        
-        'posts': Post.objects.all()[:5]
+        'posts': reversed(Post.objects.all()[:5])
     }
     return render(request, 'blogapp/index.html', context)
 
