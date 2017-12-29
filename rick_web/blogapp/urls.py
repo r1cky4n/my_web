@@ -11,13 +11,9 @@ urlpatterns = [
     #
     url(r'^about/$', views.about, name='about'),
 
-    # blogpost -> /post/ 
+    # DB Stored Blog Post -> /post/...
     #
-    url(r'^post/$', views.blogpost, name='blogpost'),
-
-    # FIXME - post 2 -> /post2/ 
-    #
-    url(r'^post2/$', views.post2, name='post2'),
+    url(r'^post/(?P<slug>[^\.]+)', views.view_post, name='view_blog_post'),
 
     # contact -> /contact/ 
     #
@@ -27,16 +23,6 @@ urlpatterns = [
     #
     url(r'^contact_msg/$', views.contact_msg, name='contact_msg'),
 
-
-
-
-
-
-
-    # DB Stored Blog Post -> /post/...
-    #
-    url(r'^post/(?P<slug>[^\.]+)', views.view_post, name='view_blog_post'),
-    
 ]
 
 

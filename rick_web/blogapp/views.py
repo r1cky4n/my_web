@@ -32,44 +32,13 @@ def about(request):
     context = { }
     return render(request, 'blogapp/about.html', context)
 
-
-# blogpost - generated blog post page FIXME: parameterize 
-#
-def blogpost(request):
-    context = { }
-    return render(request, 'blogapp/post.html', context)
-
-
-
-
-
-# FIXME - post2
-#
-def post2(request):
-    context = { }
-    return render(request, 'blogapp/post2.html', context)
-
-
-
-# FIXME
+# posts - view posts from DB 
 #
 def view_post(request, slug):   
     context = {
         'post': get_object_or_404(Post, slug=slug)
     }
     return render(request, 'blogapp/post_template.html', context)
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # contact - blog contact page

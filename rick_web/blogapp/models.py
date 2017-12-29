@@ -9,8 +9,6 @@ from datetime import datetime
 # Blog Models
 #================================================
 
-
-
 class Post(models.Model):
     title    = models.CharField(max_length=255, unique=True)          
     subtitle = models.CharField(max_length=255)          
