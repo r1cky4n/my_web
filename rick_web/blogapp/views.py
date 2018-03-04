@@ -59,6 +59,10 @@ def contact_msg(request):
             email = request.POST['email']
             msg   = request.POST['message']
 
+            # Mail is Sent
+            #
+            message = "Mail sent to contact@rickyan.com."
+
             send_mail( 
                 "[CONTACT FORM] - " + name,
                 "You have received a new message from your website contact form.\n\nHere are the details:\n\nName: "
@@ -66,10 +70,6 @@ def contact_msg(request):
                 settings.EMAIL_HOST_USER,
                 ['contact@rickyan.com'],
             )
-
-            # Mail is Sent
-            #
-            message = "Mail sent to contact@rickyan.com."
 
     context = {
         'message': message,
