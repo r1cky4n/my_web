@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 
+# Account info and other private info here, which is ignored by git
+#
+from . import local_private_settings
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -26,6 +30,7 @@ ALLOWED_HOSTS = ['34.211.100.134', 'rick-yan.com', 'www.rick-yan.com', '127.0.0.
 # Application definition
 
 INSTALLED_APPS = [
+    'blogapp.apps.BlogappConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -50,8 +55,7 @@ ROOT_URLCONF = 'rick_web_django2.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [ os.path.join(BASE_DIR,"blogapp/templates/"),
-
+        'DIRS': [os.path.join(BASE_DIR, "blogapp/templates/"),
                 ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -115,25 +119,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-STATIC_URL  = '/static/'
+STATIC_URL = '/static/'
 #STATIC_URL = os.path.join(BASE_DIR,"/www/static/")
-STATIC_ROOT = os.path.join(BASE_DIR,"../www/static/")
+STATIC_ROOT = os.path.join(BASE_DIR, "../www/static/")
 
-
-# EMAIL Settings - Using GMAIL Account which allows less secure apps
-#
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-
-# Account info and other private info here, which is ignored by git
-#
-#from local_settings import *
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'hxg7lbj4&0i=ds++9efbv9toz-#^s193wkgu+n!f3!)7ly(ksj'
+# Private settings.
+EMAIL_USE_TLS = local_private_settings.EMAIL_USE_TLS
+EMAIL_HOST = local_private_settings.EMAIL_HOST
+EMAIL_PORT = local_private_settings.EMAIL_PORT
+EMAIL_HOST_USER = local_private_settings.EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = local_private_settings.EMAIL_HOST_PASSWORD
+SECRET_KEY = local_private_settings.SECRET_KEY

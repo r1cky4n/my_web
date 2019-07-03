@@ -1,0 +1,14 @@
+{
+    "python.pythonPath": "C:\\Program Files\\Python36\\python.exe",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.pylintArgs": [
+        "--load-plugins",
+        "pylint_django"
+    ],
+    "files.autoSave": "afterDelay",
+    "editor.tabSize": 2,
+    "editor.renderWhitespace": "boundary",
+    "editor.wordWrapColumn": 100,
+    "editor.rulers":[ 120 ]
+}

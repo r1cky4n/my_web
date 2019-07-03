@@ -1,0 +1,54 @@
+{% extends 'blogapp/base.html' %}
+{% load static %}
+
+{% block title %}Rick's Blog{% endblock %}
+
+{% block header %}
+    <header class="intro-header" style="background-image: url('{% static 'img/home-bg3.jpg' %}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Welcome</h1>
+                        <hr class="small">
+                        <span class="subheading">Follow Along as I Build Things Piece by Piece</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+                <!-- Get Posts from Database -->
+                {% if posts %}
+                    {% for post in posts %}
+                        <div class="post-preview">
+                            <a href="{{ post.get_absolute_url }}">
+                                <h2 class="post-title">
+                                    {{ post.title }}
+                                </h2>
+                                <h3 class="post-subtitle">
+                                    {{ post.subtitle }}
+                                </h3>
+                            </a>
+                            <p class="post-meta">Posted on {{post.get_date_mdy}}</p>
+                        </div>
+                        <hr>
+                    {% endfor %}
+                {% endif %}
+
+                <!-- Pager -->
+                <ul class="pager">
+                    <li class="next">
+                        <a href="#">Older Posts &rarr;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
