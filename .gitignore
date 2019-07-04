@@ -2,3 +2,5 @@ node_modules
 venv
 *DS_Store
 *pyc
+.vscode/launch.json
+.vscode/settings.json
