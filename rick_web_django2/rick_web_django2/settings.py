@@ -25,7 +25,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['34.211.100.134', 'rick-yan.com', 'www.rick-yan.com', '127.0.0.1']
+ALLOWED_HOSTS = [
+    '34.211.100.134', 
+    'rick-yan.com',
+    'www.rick-yan.com', 
+    '127.0.0.1', 
+    'localhost',
+    'rick-yan-website.appspot.com',
+    'rickyan.com',
+    'www.rickyan.com', 
+]
 
 # Application definition
 
@@ -125,7 +134,7 @@ STATICFILES_DIRS = (
 
 STATIC_URL = '/static/'
 #STATIC_URL = os.path.join(BASE_DIR,"/www/static/")
-STATIC_ROOT = os.path.join(BASE_DIR, "../www/static/")
+STATIC_ROOT = os.path.join(BASE_DIR, "www/static/")
 
 # Private settings.
 EMAIL_USE_TLS = local_private_settings.EMAIL_USE_TLS
